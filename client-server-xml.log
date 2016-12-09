@@ -1,0 +1,91 @@
+The wsdl file is located at
+https://introsde2016-assignment3.herokuapp.com/ws/people?wsdl
+
+Request #1: List of persons ==>
+
+	Name: 'Michele Bof', Birthday: '06/08/1993'
+	Current profile: 
+	weight: 90 (double)
+	height: 180 (integer)
+
+
+	Name: 'Pinco Pippo', Birthday: '09/10/2010'
+	Current profile: 
+	weight: 74 (double)
+	height: 178 (integer)
+
+
+	Name: 'Francesco Bern', Birthday: '09/12/1993'
+	Current profile: 
+
+
+	Name: 'Alex Macca', Birthday: '31/07/1993'
+	Current profile: 
+	weight: 98 (double)
+	height: 184 (double)
+
+
+	Name: 'Riccardo Costan', Birthday: '02/08/1993'
+	Current profile: 
+
+
+Request #2: Person 1 ==>
+
+	Name: 'Michele Bof', Birthday: '06/08/1993'
+	Current profile: 
+	weight: 90 (double)
+	height: 180 (integer)
+
+
+Request #3: Updated person ==>
+
+	Name: 'John Bof', Birthday: '06/08/1993'
+	Current profile: 
+	weight: 90 (double)
+	height: 180 (integer)
+
+
+Request #4: New person ==>
+
+	Name: 'Jack Finn', Birthday: 'null'
+	Current profile: 
+	weight: 80 (integer)
+
+
+Request #5: Deletion ==>
+
+	OK
+
+Request #6: People 1's measures ==>
+
+	weight: 90 (double)
+	weight: 80 (double)
+
+
+Request #7: Measure list ==>
+
+	weight: 90 (double)
+	weight: 80 (double)
+	height: 184 (double)
+	height: 180 (integer)
+	height: 175 (integer)
+	weight: 98 (double)
+	height: 178 (integer)
+	weight: 74 (double)
+
+
+Request #8: Value ==>
+
+	weight: 90 (double)
+
+
+Request #9: New measure ==>
+
+	height: 158 (integer)
+
+
+Request #10: Updated measure ==>
+
+	height: 160 (integer)
+
+
