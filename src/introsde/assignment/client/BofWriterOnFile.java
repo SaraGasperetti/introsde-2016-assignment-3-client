@@ -44,7 +44,9 @@ public class BofWriterOnFile {
 	}
 
 	protected void printPrettyPerson(Person p) {
-		this.write("\tName: '" + p.getName() + " " + p.getLastname() + "', Birthday: '" + p.getBirthdate() + "'");
+		this.write("\tId: " + p.getIdPerson() + "\n\tFirstname: '" + p.getName() + 
+				"'\n\tLastname: '" + p.getLastname() + "'\n\tBirthday: '" + p.getBirthdate() + 
+				"'\n\tEmail: '" + p.getEmail() + "'");
 		this.write("\tCurrent profile: ");
 		printPrettyMeasureList(p.getCurrentHealth().getMeasure());
 	}
@@ -56,7 +58,7 @@ public class BofWriterOnFile {
 	}
 
 	protected void printPrettyMeasure(Measure m) {
-		this.write("\t" + m.getType() + ": " + m.getValue() + " (" + m.getValueType() + ")");
+		this.write("\t\t" + m.getType() + " (mid: " + m.getIdMeasure()+ "): " + m.getValue() + " (" + m.getValueType() + ") registered on " + m.getDate());
 	}
 
 	protected void printPrettyMeasureList(List<Measure> mList) {

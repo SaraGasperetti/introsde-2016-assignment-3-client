@@ -44,7 +44,9 @@ public class MyWriterOnFile {
 	}
 
 	protected void printPrettyPerson(Person p) {
-		this.write("\tName: '" + p.getFirstname() + " " + p.getLastname() + "', Birthday: '" + p.getBirthdate() + "'");
+		this.write("\tId: " + p.getIdPerson() + "\n\tFirstname: '" + p.getFirstname() + 
+				"'\n\tLastname: '" + p.getLastname() + "'\n\tBirthday: '" + p.getBirthdate() + 
+				"'\n\tEmail: '" + p.getEmail() + "'");
 		this.write("\tCurrent profile: ");
 		printPrettyMeasureList(p.getCurrentHealth().getMeasure());
 	}
@@ -56,7 +58,7 @@ public class MyWriterOnFile {
 	}
 
 	protected void printPrettyMeasure(Measure m) {
-		this.write("\t" + m.getMeasureType() + ": " + m.getMeasureValue() + " (" + m.getMeasureValueType() + ")");
+		this.write("\t\t" + m.getMeasureType() + " (mid: " + m.getIdMeasure()+ "): " + m.getMeasureValue() + " (" + m.getMeasureValueType() + ") registered on " + m.getDateRegistered());
 	}
 
 	protected void printPrettyMeasureList(List<Measure> mList) {

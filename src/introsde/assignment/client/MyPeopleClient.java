@@ -30,7 +30,7 @@ public class MyPeopleClient {
 		writer.printPrettyPerson(p);
 
 		// Request 3
-		writer.printRequest("Updated person");
+		writer.printRequest("Updated person with name John");
 		p.setFirstname("John");
 		Holder<Person> h = new Holder<>(p);
 		people.updatePerson(h);
@@ -45,6 +45,7 @@ public class MyPeopleClient {
 		m.setMeasureType("weight");
 		m.setMeasureValue("80");
 		m.setMeasureValueType("integer");
+		m.setDateRegistered("05/07/2013");
 		CurrentHealth c = new CurrentHealth();
 		c.getMeasure().add(m);
 		newPerson.setCurrentHealth(c);
@@ -68,7 +69,7 @@ public class MyPeopleClient {
 		writer.printPrettyMeasureList(measures);
 
 		// Request 8
-		writer.printRequest("Value");
+		writer.printRequest("First measure of type weight");
 		Measure measure = people.readPersonMeasure(p.getIdPerson(), "weight", measures.get(0).getIdMeasure());
 		writer.printPrettyMeasure(measure);
 		writer.write("\n");

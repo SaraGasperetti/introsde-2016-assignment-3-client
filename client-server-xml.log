@@ -3,53 +3,85 @@ https://introsde2016-assignment3.herokuapp.com/ws/people?wsdl
 
 Request #1: List of persons ==>
 
-	Name: 'Michele Bof', Birthday: '06/08/1993'
-	Current profile: 
-	weight: 90 (double)
-	height: 180 (integer)
+	Id: 1
+	Firstname: 'Michele'
+	Lastname: 'Bof'
+	Birthday: '06/08/1993'
+	Email: 'michele@test.com'
+	Current profile:
+		weight (mid: 1): 90 (double) registered on 09/08/2016
+		height (mid: 55): 180 (integer) registered on 30/11/2016
 
 
-	Name: 'Pinco Pippo', Birthday: '09/10/2010'
-	Current profile: 
-	weight: 74 (double)
-	height: 178 (integer)
+	Id: 2
+	Firstname: 'Pinco'
+	Lastname: 'Pippo'
+	Birthday: '09/10/2010'
+	Email: 'pippo@gmail.com'
+	Current profile:
+		weight (mid: 3556): 74 (double) registered on 30/11/2016
+		height (mid: 3555): 178 (integer) registered on 30/11/2016
 
 
-	Name: 'Francesco Bern', Birthday: '09/12/1993'
-	Current profile: 
+	Id: 3
+	Firstname: 'Francesco'
+	Lastname: 'Bern'
+	Birthday: '09/12/1993'
+	Email: 'francesco@test.com'
+	Current profile:
 
 
-	Name: 'Alex Macca', Birthday: '31/07/1993'
-	Current profile: 
-	weight: 98 (double)
-	height: 184 (double)
+	Id: 3554
+	Firstname: 'Alex'
+	Lastname: 'Macca'
+	Birthday: '31/07/1993'
+	Email: 'alex@macca.com'
+	Current profile:
+		weight (mid: 3554): 98 (double) registered on 28/11/2016
+		height (mid: 5): 184 (double) registered on 28/11/2016
 
 
-	Name: 'Riccardo Costan', Birthday: '02/08/1993'
-	Current profile: 
+	Id: 10451
+	Firstname: 'Riccardo'
+	Lastname: 'Costan'
+	Birthday: '02/08/1993'
+	Email: 'riccardo@costan.it'
+	Current profile:
 
 
 Request #2: Person 1 ==>
 
-	Name: 'Michele Bof', Birthday: '06/08/1993'
-	Current profile: 
-	weight: 90 (double)
-	height: 180 (integer)
+	Id: 1
+	Firstname: 'Michele'
+	Lastname: 'Bof'
+	Birthday: '06/08/1993'
+	Email: 'michele@test.com'
+	Current profile:
+		weight (mid: 1): 90 (double) registered on 09/08/2016
+		height (mid: 55): 180 (integer) registered on 30/11/2016
 
 
-Request #3: Updated person ==>
+Request #3: Updated person with name John ==>
 
-	Name: 'John Bof', Birthday: '06/08/1993'
-	Current profile: 
-	weight: 90 (double)
-	height: 180 (integer)
+	Id: 1
+	Firstname: 'John'
+	Lastname: 'Bof'
+	Birthday: '06/08/1993'
+	Email: 'michele@test.com'
+	Current profile:
+		weight (mid: 1): 90 (double) registered on 09/08/2016
+		height (mid: 55): 180 (integer) registered on 30/11/2016
 
 
 Request #4: New person ==>
 
-	Name: 'Jack Finn', Birthday: 'null'
-	Current profile: 
-	weight: 80 (integer)
+	Id: 10452
+	Firstname: 'Jack'
+	Lastname: 'Finn'
+	Birthday: 'null'
+	Email: 'null'
+	Current profile:
+		weight (mid: 3557): 80 (integer) registered on 05/07/2013
 
 
 Request #5: Deletion ==>
@@ -58,34 +90,34 @@ Request #5: Deletion ==>
 
 Request #6: People 1's measures ==>
 
-	weight: 90 (double)
-	weight: 80 (double)
+		weight (mid: 1): 90 (double) registered on 09/08/2016
+		weight (mid: 2): 80 (double) registered on 06/08/1993
 
 
 Request #7: Measure list ==>
 
-	weight: 90 (double)
-	weight: 80 (double)
-	height: 184 (double)
-	height: 180 (integer)
-	height: 175 (integer)
-	weight: 98 (double)
-	height: 178 (integer)
-	weight: 74 (double)
+		weight (mid: 1): 90 (double) registered on 09/08/2016
+		weight (mid: 2): 80 (double) registered on 06/08/1993
+		height (mid: 5): 184 (double) registered on 28/11/2016
+		height (mid: 55): 180 (integer) registered on 30/11/2016
+		height (mid: 705): 175 (integer) registered on 30/11/2016
+		weight (mid: 3554): 98 (double) registered on 28/11/2016
+		height (mid: 3555): 178 (integer) registered on 30/11/2016
+		weight (mid: 3556): 74 (double) registered on 30/11/2016
 
 
-Request #8: Value ==>
+Request #8: First measure of type weight ==>
 
-	weight: 90 (double)
+		weight (mid: 1): 90 (double) registered on 09/08/2016
 
 
 Request #9: New measure ==>
 
-	height: 158 (integer)
+		height (mid: 3558): 158 (integer) registered on 09/12/2016
 
 
 Request #10: Updated measure ==>
 
-	height: 160 (integer)
+		height (mid: 3558): 160 (integer) registered on 09/12/2016
 
 
