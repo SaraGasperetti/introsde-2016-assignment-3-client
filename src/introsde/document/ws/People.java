@@ -31,6 +31,21 @@ public interface People {
      * 
      * @param personId
      * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(name = "delete", targetNamespace = "")
+    @RequestWrapper(localName = "deletePerson", targetNamespace = "http://ws.document.introsde/", className = "introsde.document.ws.DeletePerson")
+    @ResponseWrapper(localName = "deletePersonResponse", targetNamespace = "http://ws.document.introsde/", className = "introsde.document.ws.DeletePersonResponse")
+    @Action(input = "http://ws.document.introsde/People/deletePersonRequest", output = "http://ws.document.introsde/People/deletePersonResponse")
+    public int deletePerson(
+        @WebParam(name = "personId", targetNamespace = "")
+        int personId);
+
+    /**
+     * 
+     * @param personId
+     * @return
      *     returns introsde.document.ws.Person
      */
     @WebMethod
@@ -41,18 +56,6 @@ public interface People {
     public Person readPerson(
         @WebParam(name = "personId", targetNamespace = "")
         int personId);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<introsde.document.ws.Person>
-     */
-    @WebMethod
-    @WebResult(name = "people", targetNamespace = "")
-    @RequestWrapper(localName = "readPersonList", targetNamespace = "http://ws.document.introsde/", className = "introsde.document.ws.ReadPersonList")
-    @ResponseWrapper(localName = "readPersonListResponse", targetNamespace = "http://ws.document.introsde/", className = "introsde.document.ws.ReadPersonListResponse")
-    @Action(input = "http://ws.document.introsde/People/readPersonListRequest", output = "http://ws.document.introsde/People/readPersonListResponse")
-    public List<Person> readPersonList();
 
     /**
      * 
@@ -80,18 +83,15 @@ public interface People {
 
     /**
      * 
-     * @param personId
      * @return
-     *     returns int
+     *     returns java.util.List<introsde.document.ws.Person>
      */
     @WebMethod
-    @WebResult(name = "delete", targetNamespace = "")
-    @RequestWrapper(localName = "deletePerson", targetNamespace = "http://ws.document.introsde/", className = "introsde.document.ws.DeletePerson")
-    @ResponseWrapper(localName = "deletePersonResponse", targetNamespace = "http://ws.document.introsde/", className = "introsde.document.ws.DeletePersonResponse")
-    @Action(input = "http://ws.document.introsde/People/deletePersonRequest", output = "http://ws.document.introsde/People/deletePersonResponse")
-    public int deletePerson(
-        @WebParam(name = "personId", targetNamespace = "")
-        int personId);
+    @WebResult(name = "people", targetNamespace = "")
+    @RequestWrapper(localName = "readPersonList", targetNamespace = "http://ws.document.introsde/", className = "introsde.document.ws.ReadPersonList")
+    @ResponseWrapper(localName = "readPersonListResponse", targetNamespace = "http://ws.document.introsde/", className = "introsde.document.ws.ReadPersonListResponse")
+    @Action(input = "http://ws.document.introsde/People/readPersonListRequest", output = "http://ws.document.introsde/People/readPersonListResponse")
+    public List<Person> readPersonList();
 
     /**
      * 
